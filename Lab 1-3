@@ -1,0 +1,21 @@
+Lab #3
+#include <iostream>
+#include <stdio.h>
+
+// Complete a simple function print_addr(int x) whose sole purpose is to print the address of the integer x passed to it.
+
+void *print_address(int *x) {
+    int z=*x;
+    int *y; 
+    y=&z;
+    return y;
+    
+}
+
+int main() {
+  int x;
+
+  printf("address of x is: %p\n", print_address(&x));
+
+  return 0;
+}
