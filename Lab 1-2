@@ -1,0 +1,26 @@
+Lab #2
+#include <iostream>
+#include <stdio.h>
+
+// Complete a function add(). This function performs addition of two numbers using pointers.
+
+long add(long *x, long *y) {
+   long w=0, z=0, *zx, *zy;
+    zx=&w;
+    zy=&z;
+    *zx=*x;
+    *zy=*y;   
+  return w+z;
+}
+
+int main() {
+  long first, second, sum;
+
+  printf("Input two integers to add\n");
+  scanf("%ld%ld", &first, &second);
+
+  sum = add(&first, &second);
+  printf("(%ld) + (%ld) = (%ld)\n", first, second, sum);
+
+  return 0;
+}
