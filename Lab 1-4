@@ -1,0 +1,19 @@
+Lab #4
+#include <stdio.h>
+
+// Complete a function new_integer() that declares and initializes an integer inside the function
+// and returns the address of that integer.
+// Print out the integer value associated with this memory address in main. Is this legal C? 
+// Does your complier display warnings? Is this a safe operation?
+
+void *new_integer() {
+    int z, *w;
+    z=99;
+    w=&z;
+    printf("the address is: %p\n", &z);
+}
+
+int main() {
+  new_integer();
+  return 0;
+}
