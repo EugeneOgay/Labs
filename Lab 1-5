@@ -1,0 +1,24 @@
+Lab #5
+/* Write a short C program that declares and initializes (to any value you like) a double, an int, and a char. Next declare and 
+initialize a pointer to each of the three variables. Your program should then print the address of, and value stored in, and the memory 
+size (in bytes) of each of the six variables. Use the 0x%x formatting specifier to print addresses in hexadecimal. You should see addresses 
+that look something like this: 0xbfe55918. The initial characters 0x tell you that hexadecimal notation is being used; the remainder of the 
+digits give the address itself. Use the sizeof operator to determine the memory size allocated for each variable. */
+
+#include <iostream>
+#include<stdio.h>
+
+int main() {
+  int x = 10, *q;
+  char y = 'a', *w;
+  double z= 848.66, *e;
+  q=&x;
+  w=&y;
+  e=&z;
+  printf("Data type:    Value name:    Address:    Value stored:    Memory_size: \n");
+ // printf("int   x    ","%p", &x,"    %d", x,"   %f", sizeof x, "\n");
+  printf("   int             x        %p        %d               %d\n", &x, x, sizeof x);
+  printf("   char            y        %p         %c               %d\n", &y, y, sizeof y);
+  printf("  double           z        %p     %f          %d\n", &z, z, sizeof z);
+  return 0;
+}
